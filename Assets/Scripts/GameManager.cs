@@ -8,8 +8,8 @@ using UnityEngine.Serialization;
 public class GameManager : MonoBehaviour
 {
     public static int levelToLoad;
-    //[SerializeField] private GameObject pauseUI;
-    //[SerializeField] private GameObject pauseBtn;
+    [SerializeField] private GameObject pauseUI;
+    [SerializeField] private GameObject pauseBtn;
     public UIManager uiManager;
 
     private void Start()
@@ -27,17 +27,15 @@ public class GameManager : MonoBehaviour
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
 
-    /*public void PauseBtn()
+    public void PauseBtn()
     {
-        click.Play();
         uiManager.OpenPauseMenu();
     }
 
     public void ResumeBtn()
     {
-        click.Play();
         uiManager.ClosePauseMenu();
-    }*/
+    }
 
     public void MenuBtn()
     {
